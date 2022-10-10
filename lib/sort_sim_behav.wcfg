@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="sort_sim_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="sort_sim" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="22.543 ns"></ZoomEndTime>
+      <Cursor1Time time="17.112 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="4" />
+   <wvobject type="array" fp_name="/sort_sim/float1">
+      <obj_property name="ElementShortName">float1[8:0]</obj_property>
+      <obj_property name="ObjectShortName">float1[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sort_sim/float2">
+      <obj_property name="ElementShortName">float2[8:0]</obj_property>
+      <obj_property name="ObjectShortName">float2[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sort_sim/larger">
+      <obj_property name="ElementShortName">larger[8:0]</obj_property>
+      <obj_property name="ObjectShortName">larger[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sort_sim/smaller">
+      <obj_property name="ElementShortName">smaller[8:0]</obj_property>
+      <obj_property name="ObjectShortName">smaller[8:0]</obj_property>
+   </wvobject>
+</wave_config>
