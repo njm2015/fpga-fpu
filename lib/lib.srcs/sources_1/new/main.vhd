@@ -13,6 +13,15 @@ end main;
 architecture arch of main is
 
     signal out1, out2 : std_logic_vector(4 downto 0);
+    
+--    component sort is 
+    
+--        port (
+--            float1, float2 : in std_logic_vector(4 downto 0);
+--            larger, smaller : out std_logic_vector(4 downto 0)
+--        );
+    
+--    end component;
 
 begin
 

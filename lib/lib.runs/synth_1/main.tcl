@@ -97,10 +97,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/nathaniel/workspace/fpga-fpu/lib/lib.srcs/constrs_1/new/nexys_a7.xdc
-set_property used_in_implementation false [get_files /home/nathaniel/workspace/fpga-fpu/lib/lib.srcs/constrs_1/new/nexys_a7.xdc]
+read_xdc /home/nathaniel/workspace/fpga-fpu/lib/lib.srcs/constrs_1/new/nexys_a7_100t.xdc
+set_property used_in_implementation false [get_files /home/nathaniel/workspace/fpga-fpu/lib/lib.srcs/constrs_1/new/nexys_a7_100t.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/nathaniel/workspace/fpga-fpu/lib/lib.srcs/utils_1/imports/synth_1/main.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
