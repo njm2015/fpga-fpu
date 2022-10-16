@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "shift_sim_behav" "xil_defaultlib.shift_sim" -log "elaborate.log" 

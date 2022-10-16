@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity main is
 
@@ -12,31 +13,17 @@ end main;
 
 architecture arch of main is
 
-    signal out1, out2 : std_logic_vector(4 downto 0);
-    
---    component sort is 
-    
---        port (
---            float1, float2 : in std_logic_vector(4 downto 0);
---            larger, smaller : out std_logic_vector(4 downto 0)
---        );
-    
---    end component;
-
 begin
 
-    sorter: entity work.sort(arch)
-    generic map (
-        exp_width => 2,
-        sig_width => 2
-    ) port map (
-        float1 => '0' & sw(3 downto 0),
-        float2 => '0' & sw(7 downto 4),
-        smaller => out1,
-        larger => out2
+    sorter:
+    entity work.sort_com(fixed_width)
+        generic map (
+            fixed_width => 4
+        ) port map (
+            num1 => sw(3 downto 0),
+            num2 => sw(7 downto 4),
+            smaller => led(3 downto 0),
+            larger => led(7 downto 4)
     );
-    
-    led(3 downto 0) <= out1(3 downto 0);
-    led(7 downto 4) <= out2(3 downto 0);
     
 end arch;

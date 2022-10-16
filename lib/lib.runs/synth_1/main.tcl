@@ -85,7 +85,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -vhdl2008 -library xil_defaultlib {
-  /home/nathaniel/workspace/fpga-fpu/lib/lib.srcs/sources_1/new/sort.vhd
+  /home/nathaniel/workspace/fpga-fpu/lib/lib.srcs/sources_1/new/sort_com.vhd
   /home/nathaniel/workspace/fpga-fpu/lib/lib.srcs/sources_1/new/main.vhd
 }
 OPTRACE "Adding files" END { }
