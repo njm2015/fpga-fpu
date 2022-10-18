@@ -70,6 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param xicom.use_bs_reader 1
+set_param chipscope.maxJobs 2
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-3
 
@@ -84,13 +87,13 @@ set_property ip_output_repo /home/nathaniel/workspace/fpga-fpu/fpu/fpu.cache/ip 
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -vhdl2008 -library global_main /home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/main.vhd
 read_vhdl -vhdl2008 -library lib_fp {
-  /home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/adder.vhd
   /home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/adder_pkg.vhd
+  /home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/adder.vhd
   /home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/align.vhd
   /home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/sort.vhd
 }
+read_vhdl -vhdl2008 -library global_main /home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/main.vhd
 read_vhdl -vhdl2008 -library lib_common {
   /home/nathaniel/workspace/fpga-fpu/lib/lib.srcs/sources_1/new/sort_com.vhd
   /home/nathaniel/workspace/fpga-fpu/lib/lib.srcs/sources_1/new/shift_com.vhd
@@ -108,6 +111,8 @@ read_xdc /home/nathaniel/workspace/fpga-fpu/lib/lib.srcs/constrs_1/new/nexys_a7_
 set_property used_in_implementation false [get_files /home/nathaniel/workspace/fpga-fpu/lib/lib.srcs/constrs_1/new/nexys_a7_100t.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/nathaniel/fpu/fpu.srcs/utils_1/imports/synth_1/main.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

@@ -1,15 +1,13 @@
 library lib_fp;
-use lib_fp.all;
-
 package fp_t is new lib_fp.adder_pkg
-    generic map (sig_width => 4);
+    generic map (sig_width => 4, exp_width => 3);
 
-use work.fp_t;
 ------------------------------------------------------
 
 library ieee;
 library lib_fp;
 use ieee.std_logic_1164.all;
+use work.fp_t;
 
 
 entity main is
@@ -42,8 +40,7 @@ begin
     fp2.sig <= in2(3 downto 0);
     fp2.exp <= in2(6 downto 4);
     
-    sort:
-    entity lib_fp.adder(arch)
+    adder_inst: adder
     port map (
         in1 => fp1,
         in2 => fp2,
@@ -51,7 +48,7 @@ begin
         out_smaller => smaller
     );
     
-    led_out1 <= larger.exp & larger.sig;
-    led_out2 <= smaller.exp & smaller.sig;
+    led_out1 <= smaller.exp & smaller.sig;
+    led_out2 <= larger.exp & larger.sig;
 
 end arch;

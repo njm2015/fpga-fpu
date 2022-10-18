@@ -1,6 +1,3 @@
-library lib_fp;
-use lib_fp.all;
-
 -- fp_t MUST BE DECLARED BY MAIN ENTITY
 library global_main;
 use global_main.fp_t;
@@ -25,6 +22,9 @@ library lib_common;
 use ieee.std_logic_1164.all;
 
 architecture arch of sort is
+    
+    signal out_larger_vec, out_smaller_vec : std_logic_vector(fp_t.sig_width + fp_t.exp_width - 1 downto 0);
+
 begin
 
     fp_sort:
@@ -34,10 +34,18 @@ begin
         exp_width => sort.exp_width,
         fixed_width => sort.sig_width + sort.exp_width
     ) port map (
-        num1 => in1.sig & in1.exp,
-        num2 => in2.sig & in2.exp,
-        larger => out_larger.sig & out_larger.exp,
-        smaller => out_smaller.sig & out_smaller.exp
+        num1 => in1.exp & in1.sig,
+        num2 => in2.exp & in2.sig,
+        larger => out_larger_vec,
+        smaller => out_smaller_vec
     );
+    
+    out_larger.sign <= '0';     -- TODO IMPLEMENT SIGN
+    out_larger.sig <= out_larger_vec(fp_t.sig_width-1 downto 0);
+    out_larger.exp <= out_larger_vec(fp_t.sig_width + fp_t.exp_width - 1 downto fp_t.sig_width);
+
+    out_smaller.sign <= '0';       -- TODO IMPLEMENT SIGN
+    out_smaller.sig <= out_smaller_vec(fp_t.sig_width-1 downto 0);
+    out_smaller.exp <= out_smaller_vec(fp_t.sig_width + fp_t.exp_width - 1 downto fp_t.sig_width);
 
 end arch;

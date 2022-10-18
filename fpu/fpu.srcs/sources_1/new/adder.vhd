@@ -1,8 +1,5 @@
-library ieee;
-use ieee.std_logic_1164.all;
-
---library global_main;
-use work.fp_t;
+library global_main;
+use global_main.fp_t;
 
 entity adder is
 

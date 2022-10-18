@@ -9,9 +9,9 @@ package adder_pkg is
 
     -- generic with derived constant
     generic (
-        sig_width : integer
+        sig_width : integer;
+        exp_width : integer
     );
-    constant exp_width : integer := integer(ceil(log2(real(sig_width))));
     
     -- define fp type -------------------------------------
     type fp is record
