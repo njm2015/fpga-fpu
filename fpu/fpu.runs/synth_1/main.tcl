@@ -70,9 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param xicom.use_bs_reader 1
-set_param chipscope.maxJobs 2
-set_msg_config -id {Common 17-41} -limit 10000000
+set_param chipscope.maxJobs 8
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-3
 
@@ -111,8 +109,6 @@ read_xdc /home/nathaniel/workspace/fpga-fpu/lib/lib.srcs/constrs_1/new/nexys_a7_
 set_property used_in_implementation false [get_files /home/nathaniel/workspace/fpga-fpu/lib/lib.srcs/constrs_1/new/nexys_a7_100t.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
-
-read_checkpoint -auto_incremental -incremental /home/nathaniel/fpu/fpu.srcs/utils_1/imports/synth_1/main.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
@@ -129,7 +125,6 @@ set_param constraints.enableBinaryConstraints false
 write_checkpoint -force -noxdef main.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

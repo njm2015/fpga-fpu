@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1665934374" LaunchIncrCheckpoint="$PPRDIR/../../../fpu/fpu.srcs/utils_1/imports/synth_1/main.dcp">
-  <File Type="VDS-TIMING-PB" Name="main_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="main_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="main.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="main_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="main_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="main_drc_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1666052264">
   <File Type="RDS-RDS" Name="main.vds"/>
   <File Type="REPORTS-TCL" Name="main_reports.tcl"/>
   <File Type="PA-TCL" Name="main.tcl"/>
+  <File Type="RDS-DCP" Name="main.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/adder_pkg.vhd">
@@ -80,14 +75,6 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
     <Filter Type="Utils"/>
-    <File Path="$PPRDIR/../../../fpu/fpu.srcs/utils_1/imports/synth_1/main.dcp">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedInSteps" Val="synth_1"/>
-        <Attr Name="AutoDcp" Val="1"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>

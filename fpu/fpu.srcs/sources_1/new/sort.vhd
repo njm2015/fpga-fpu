@@ -6,8 +6,8 @@ use global_main.fp_t;
 entity sort is
     
     generic (
-        sig_width : integer := fp_t.sig_width;
-        exp_width : integer := fp_t.exp_width
+        sig_width : integer;
+        exp_width : integer
     );
     
     port (
