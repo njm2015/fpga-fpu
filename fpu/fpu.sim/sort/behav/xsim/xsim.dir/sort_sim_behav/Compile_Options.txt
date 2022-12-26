@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "8" -L "lib_fp" -L "global_main" -L "lib_common" -L "secureip" --snapshot "sort_sim_behav" "global_main.sort_sim" -log "elaborate.log" 

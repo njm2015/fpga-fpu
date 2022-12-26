@@ -1,0 +1,10 @@
+0.7
+2020.2
+Apr 18 2022
+15:53:03
+/home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/add/new/add_sim.vhd,1672082589,vhdl2008,,,,add_sim,,,,,,,,
+/home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/add.vhd,1672082150,vhdl2008,/home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/add/new/add_sim.vhd,,,add,,,,,,,,
+/home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/adder.vhd,1672082771,vhdl2008,,,,adder,,,,,,,,
+/home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/adder_pkg.vhd,1667182449,vhdl2008,/home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/global.vhd,,,adder_pkg,,,,,,,,
+/home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/align.vhd,1667182556,vhdl2008,,,,align,,,,,,,,
+/home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/sort.vhd,1667171191,vhdl2008,,,,sort,,,,,,,,

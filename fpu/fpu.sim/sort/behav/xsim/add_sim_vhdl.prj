@@ -1,0 +1,22 @@
+# compile vhdl design source files
+vhdl2008 lib_fp  \
+"../../../../fpu.srcs/sources_1/new/adder_pkg.vhd" \
+
+vhdl2008 global_main  \
+"../../../../fpu.srcs/sources_1/new/global.vhd" \
+
+vhdl2008 lib_common  \
+"../../../../../lib/lib.srcs/sources_1/new/sort_com.vhd" \
+"../../../../../lib/lib.srcs/sources_1/new/shift_com.vhd" \
+
+vhdl2008 lib_fp  \
+"../../../../fpu.srcs/sources_1/new/adder.vhd" \
+"../../../../fpu.srcs/sources_1/new/align.vhd" \
+"../../../../fpu.srcs/sources_1/new/sort.vhd" \
+"../../../../fpu.srcs/sources_1/new/add.vhd" \
+
+vhdl2008 global_main  \
+"../../../../fpu.srcs/sort/imports/new/sort_sim.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,6 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/adder.vhd" into library lib_fp
-INFO: [VRFC 10-3107] analyzing entity 'adder'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/sort.vhd" into library lib_fp
-INFO: [VRFC 10-3107] analyzing entity 'sort'
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/imports/new/adder_sim.vhd" into library global_main
 INFO: [VRFC 10-3107] analyzing entity 'adder_sim'

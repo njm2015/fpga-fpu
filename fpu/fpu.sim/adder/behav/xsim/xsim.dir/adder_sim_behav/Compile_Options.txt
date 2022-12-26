@@ -1,1 +1,1 @@
---incr --debug "typical" --relax --mt "8" -L "lib_fp" -L "lib_common" -L "global_main" -L "secureip" --snapshot "adder_sim_behav" "global_main.adder_sim" -log "elaborate.log" 
+--incr --debug "typical" --relax --mt "8" -L "lib_fp" -L "global_main" -L "lib_common" -L "secureip" --snapshot "adder_sim_behav" "global_main.adder_sim" -log "elaborate.log" 

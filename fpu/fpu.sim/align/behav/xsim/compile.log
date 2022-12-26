@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/adder_pkg.vhd" into library lib_fp
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/global.vhd" into library global_main
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/align.vhd" into library lib_fp
+INFO: [VRFC 10-3107] analyzing entity 'align'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/align/new/align_sim.vhd" into library global_main
+INFO: [VRFC 10-3107] analyzing entity 'align_sim'

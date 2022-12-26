@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 8
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-3
 
@@ -90,8 +89,12 @@ read_vhdl -vhdl2008 -library lib_fp {
   /home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/adder.vhd
   /home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/align.vhd
   /home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/sort.vhd
+  /home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/add.vhd
 }
-read_vhdl -vhdl2008 -library global_main /home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/main.vhd
+read_vhdl -vhdl2008 -library global_main {
+  /home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/global.vhd
+  /home/nathaniel/workspace/fpga-fpu/fpu/fpu.srcs/sources_1/new/main.vhd
+}
 read_vhdl -vhdl2008 -library lib_common {
   /home/nathaniel/workspace/fpga-fpu/lib/lib.srcs/sources_1/new/sort_com.vhd
   /home/nathaniel/workspace/fpga-fpu/lib/lib.srcs/sources_1/new/shift_com.vhd

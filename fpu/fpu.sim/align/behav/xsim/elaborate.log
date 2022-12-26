@@ -1,0 +1,20 @@
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/nathaniel/xilinx/Vivado/2022.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L lib_fp -L global_main -L lib_common -L secureip --snapshot align_sim_behav global_main.align_sim -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.math_real
+Compiling package lib_fp.fp_t
+Compiling package ieee.std_logic_arith
+Compiling architecture left of entity lib_common.shift_com [\shift_com(v_width=5,amt_width=3...]
+Compiling architecture arch of entity lib_fp.align [\align(sig_width=4,exp_width=3)\]
+Compiling architecture arch_sim of entity global_main.align_sim
+Built simulation snapshot align_sim_behav

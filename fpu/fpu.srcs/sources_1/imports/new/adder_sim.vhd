@@ -15,12 +15,13 @@ end adder_sim;
 architecture arch_sim of adder_sim is
 
     signal in1, in2 : fp_t.fp;
-    signal out_larger, out_smaller : fp_t.fp;
+    signal fp_added : fp_t.fp;
+    
     
     component adder
     port (
         in1, in2 : in fp_t.fp;
-        out_larger, out_smaller : out fp_t.fp 
+        fp_added : out fp_t.fp 
     );
     end component;
 
@@ -30,8 +31,7 @@ begin
     port map (
         in1 => in1,
         in2 => in2,
-        out_larger => out_larger,
-        out_smaller => out_smaller
+        fp_added => fp_added
     );
     
     process begin
@@ -46,11 +46,10 @@ begin
     
         wait for 10 ns;
         
-        in1.sig <= "0001";
-        wait for 10 ns;
+        in1.exp <= "100";
+        in2.exp <= "110";
         
-        in2.sig <= "0010";
-        wait for 10 ns;
+        wait for 10 ns;  
     
     end process;
 

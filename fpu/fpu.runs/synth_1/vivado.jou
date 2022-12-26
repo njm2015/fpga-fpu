@@ -2,12 +2,12 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Mon Oct 17 19:17:47 2022
-# Process ID: 8194
+# Start of session at: Mon Dec 26 13:27:46 2022
+# Process ID: 7212
 # Current directory: /home/nathaniel/workspace/fpga-fpu/fpu/fpu.runs/synth_1
 # Command line: vivado -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
 # Log file: /home/nathaniel/workspace/fpga-fpu/fpu/fpu.runs/synth_1/main.vds
 # Journal file: /home/nathaniel/workspace/fpga-fpu/fpu/fpu.runs/synth_1/vivado.jou
-# Running On: fpga-emu, OS: Linux, CPU Frequency: 2294.673 MHz, CPU Physical cores: 32, Host memory: 67403 MB
+# Running On: fpga-emu, OS: Linux, CPU Frequency: 2294.770 MHz, CPU Physical cores: 32, Host memory: 67403 MB
 #-----------------------------------------------------------
 source main.tcl -notrace

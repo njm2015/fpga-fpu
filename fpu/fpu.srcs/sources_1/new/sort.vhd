@@ -28,11 +28,9 @@ architecture arch of sort is
 begin
 
     fp_sort:
-    entity lib_common.sort_com(floating_point)
-    generic map(
-        sig_width => sort.sig_width,
-        exp_width => sort.exp_width,
-        fixed_width => sort.sig_width + sort.exp_width
+    entity lib_common.sort_com(fixed_width_unsigned)
+    generic map (
+        fixed_width => sig_width + exp_width
     ) port map (
         num1 => in1.exp & in1.sig,
         num2 => in2.exp & in2.sig,
@@ -40,12 +38,12 @@ begin
         smaller => out_smaller_vec
     );
     
-    out_larger.sign <= '0';     -- TODO IMPLEMENT SIGN
-    out_larger.sig <= out_larger_vec(fp_t.sig_width-1 downto 0);
-    out_larger.exp <= out_larger_vec(fp_t.sig_width + fp_t.exp_width - 1 downto fp_t.sig_width);
-
-    out_smaller.sign <= '0';       -- TODO IMPLEMENT SIGN
-    out_smaller.sig <= out_smaller_vec(fp_t.sig_width-1 downto 0);
-    out_smaller.exp <= out_smaller_vec(fp_t.sig_width + fp_t.exp_width - 1 downto fp_t.sig_width);
+    out_larger.sign <= '0';
+    out_larger.exp  <= out_larger_vec(fp_t.sig_width + fp_t.exp_width - 1 downto fp_t.sig_width);
+    out_larger.sig  <= out_larger_vec(fp_t.sig_width-1 downto 0);
+    
+    out_smaller.sign <= '0';
+    out_smaller.exp  <= out_smaller_vec(fp_t.sig_width + fp_t.exp_width - 1 downto fp_t.sig_width);
+    out_smaller.sig  <= out_smaller_vec(fp_t.sig_width - 1 downto 0);
 
 end arch;
